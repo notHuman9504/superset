@@ -382,6 +382,11 @@ class Markdown extends PureComponent {
                   ref={dragSourceRef}
                   className="dashboard-component dashboard-component-chart-holder"
                   data-test="dashboard-component-chart-holder"
+                  onClick={() => {
+                    if (editMode) {
+                      this.handleChangeFocus(true);
+                    }
+                  }}
                 >
                   {editMode && (
                     <HoverMenu position="top">
